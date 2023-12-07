@@ -54,7 +54,7 @@ jobs:
     steps:
       - run: |
           echo "🧪 Testing..."
-          sleep 15
+          sleep 5
 
   Production:
     runs-on: ubuntu-latest
@@ -66,19 +66,19 @@ jobs:
     steps:
       - run: |
           echo "🚀 Step 1..."
-          sleep 10
+          sleep 2
       - run: |
           echo "🚀 Step 2..."
-          sleep 10
+          sleep 2
       - run: |
           echo "🚀 Step 3..."
-          sleep 10
+          sleep 2
       - run: |
           echo "🚀 Step 4..."
-          sleep 10
+          sleep 2
       - run: |
           echo "🚀 Step 5..."
-          sleep 10
+          sleep 2
 
 
 
