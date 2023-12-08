@@ -7,9 +7,9 @@ jobs:
     with: who-to-greet: '@octocat'
 
   use-output:
-    name: call a reusable workflow
+    #name: call a reusable workflow
     needs: [call-workflow]
     runs-on: ubuntu-latest
     steps:
-      - name: output time to console
-        -run: echo "Time was ${{ needs.call-workflow.outputs.current-time }}"
+      #- name: output time to console
+      - run: echo "Time was ${{ needs.call-workflow.outputs.current-time }}"
