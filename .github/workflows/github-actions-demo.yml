@@ -28,8 +28,13 @@ jobs:
 
       #- uses: actions/checkout@v3.3.0
       #- run: echo '${{ toJSON(runner) }}' 
-      - run: echo '${{ toJSON(github) }}' 
-
+      #- run: echo '${{ toJSON(github) }}' 
+      
+      - run: |
+          echo "::group::My title"
+          echo "Inside group"
+          echo "::endgroup::"
+            
       #- name: list files in the repo
       #  run: |
       #    echo "The repository ${{ github.repository }} contains the following files:"
