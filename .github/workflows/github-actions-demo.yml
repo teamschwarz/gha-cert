@@ -26,17 +26,14 @@ jobs:
           echo "🎉 The job was triggered by event: ${{ github.event_name }}"
           echo "🔎 The name of your branch is ${{ github.ref }}"
 
-      - uses: actions/checkout@v3.3.0
-
-      #— name: Dump runner context 
+      #- uses: actions/checkout@v3.3.0
       #- run: echo '${{ toJSON(runner) }}' 
-      — name: Dump GitHub Context
       - run: echo '${{ toJSON(github) }}' 
 
-      - name: list files in the repo
-        run: |
-          echo "The repository ${{ github.repository }} contains the following files:"
-          tree
+      #- name: list files in the repo
+      #  run: |
+      #    echo "The repository ${{ github.repository }} contains the following files:"
+      #    tree
   
   Test:
     runs-on: ubuntu-latest
