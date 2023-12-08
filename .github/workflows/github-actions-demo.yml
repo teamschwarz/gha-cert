@@ -7,8 +7,8 @@ on:
     paths-ignore: [.github/**]
   pull_request:
     branches: main
-  schedule:
-    - cron: '15 6 * * 0'
+  #schedule:
+  #  - cron: '15 6 * * 0'
   workflow_dispatch:
     inputs:
       environment:
@@ -24,14 +24,14 @@ jobs:
     steps:
       - run: |
           echo "🎉 The job was triggered by event: ${{ github.event_name }}"
-          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
+          echo "🔎 The name of your branch is ${{ github.ref }}"
 
       - uses: actions/checkout@v3.3.0
 
       #— name: Dump runner context 
       #- run: echo '${{ toJSON(runner) }}' 
-      #— name: Dump GitHub Context
-      #- run: echo '${{ toJSON(github) }}' 
+      — name: Dump GitHub Context
+      - run: echo '${{ toJSON(github) }}' 
 
       - name: list files in the repo
         run: |
