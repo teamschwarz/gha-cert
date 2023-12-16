@@ -46,7 +46,17 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     environment: Test
     steps:
-      - run: echo "🧪 Testing..."
+      - run: |
+          echo "🧪 Testing..."
+          echo "::error file=app.js,line=1,col=5,endColumn=7::total lack of decorum"
+          echo "::warning file=app.js,line=1,col=5,endColumn=7::warn ngs are on the loose"
+          echo "::notice file=app.js,line=1,col=5,endColumn=7::notice the semicolon"
+          echo "::add-mask::Mona The Octocat"
+          ::stop-commands::"QQQ"
+          ::"QQQ"::
+          echo "LATIN=EpluribusEnum" >> "$GITHUB_ENV"
+          echo $LATIN
+
 
   Load-Test:
     runs-on: ubuntu-latest
