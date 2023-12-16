@@ -25,6 +25,10 @@ jobs:
       - run: |
           echo "🎉 The job was triggered by event: ${{ github.event_name }}"
           echo "🔎 The name of your branch is ${{ github.ref }}"
+          echo "gh output      : $GITHUB_OUTPUT"
+          echo "gh state       : $GITHUB_STATE"
+          echo "gh step summary: $GITHUB_STEP_SUMMARY"
+          
 
       #- uses: actions/checkout@v3.3.0
       #- run: echo '${{ toJSON(runner) }}' 
