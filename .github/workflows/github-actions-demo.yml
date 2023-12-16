@@ -25,14 +25,14 @@ jobs:
       - run: |
           echo "🎉 The job was triggered by event: ${{ github.event_name }}"
           echo "🔎 The name of your branch is ${{ github.ref }}"
-          echo "gh output      : $GITHUB_OUTPUT"
-          echo "gh state       : $GITHUB_STATE"
-          echo "gh step summary: $GITHUB_STEP_SUMMARY"
+          # echo "gh output      : $GITHUB_OUTPUT"
+          # echo "gh state       : $GITHUB_STATE"
+          # echo "gh step summary: $GITHUB_STEP_SUMMARY"
           
 
       #- uses: actions/checkout@v3.3.0
       #- run: echo '${{ toJSON(runner) }}' 
-      #- run: echo '${{ toJSON(github) }}' 
+      - run: echo '${{ toJSON(github) }}' 
       
       - run: |
           echo "::group::My title"
@@ -59,7 +59,7 @@ jobs:
           ::stop-commands::"QQQ"
           ::"QQQ"::
           echo "LATIN=EpluribusEnum" >> "$GITHUB_ENV"
-          echo $LATIN
+          # echo $LATIN
 
 
   Load-Test:
